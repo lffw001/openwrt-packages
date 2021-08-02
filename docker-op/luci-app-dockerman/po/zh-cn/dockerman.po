@@ -1074,7 +1074,13 @@ msgid "It replaces the daemon registry mirrors with a new set of registry mirror
 msgstr "将守护程序注册表镜像替换为一组新的注册表镜像"
 
 
+msgid "Can NOT connect to docker daemon, please check!!"
+msgstr "连接不到Docker守护，请检查！"
 
+msgid "Loading.."
+msgstr "加载.."
 
+msgid "Docker daemon:restarting"
+msgstr "Docker守护：重新启动"
 
 
