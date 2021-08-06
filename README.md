@@ -27,7 +27,7 @@
 | luci-app-eqos | eqos简单IP限速控制服务 |
 | luci-app-advanced | 高级设置，可直接修改某些配置 |
 | luci-app-serverchan | Server酱微信/Telegram 推送的插件 |
-
+| luci-app-adblock-plus | 去广告 |
 
 
 ## 提醒：
