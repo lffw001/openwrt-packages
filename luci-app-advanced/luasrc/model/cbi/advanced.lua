@@ -262,7 +262,7 @@ end
 end
 
 if nixio.fs.access("/etc/config/smartdns")then
-s:tab("smartdnsconf",translate("SMARTDNS"),translate("本页是配置/etc/config/smartdns包含smartdns配置文档内容。应用保存后自动重启生效"))
+s:tab("smartdnsconf",translate("SmartDNS"),translate("本页是配置/etc/config/smartdns包含smartdns配置文档内容。应用保存后自动重启生效"))
 conf=s:taboption("smartdnsconf",Value,"smartdnsconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
@@ -283,7 +283,7 @@ end
 end
 end
 if nixio.fs.access("/etc/config/openclash")then
-s:tab("openclashconf",translate("openclash"),translate("本页是配置/etc/config/openclash的文档内容。应用保存后自动重启生效"))
+s:tab("openclashconf",translate("OpenClash"),translate("本页是配置/etc/config/openclash的文档内容。应用保存后自动重启生效"))
 conf=s:taboption("openclashconf",Value,"openclashconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
