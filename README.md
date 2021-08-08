@@ -14,8 +14,6 @@
 | k3screenctrl_build | 斐讯K3屏幕套件 |
 | luci-app-k3screenctrl | 斐讯K3屏幕控制 |
 | luci-app-autotimeset | 定时设置(重启、关机等) |
-| luci-app-koolproxy | kp去广告 |
-| luci-app-koolproxyR | kpr去广告 |
 | luci-app-poweroff | 单独的关机 |
 | luci-app-smartdns | smartdns插件 |
 | smartdns | smartdns依赖 |
