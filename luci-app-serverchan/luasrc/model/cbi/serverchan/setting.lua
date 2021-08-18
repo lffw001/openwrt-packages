@@ -324,7 +324,6 @@ a:value("block",translate("仅通知列表内设备"))
 a:value("interface",translate("仅通知此接口设备"))
 a.rmempty = true
 
-
 a = s:taboption("disturb", DynamicList, "serverchan_whitelist", translate("忽略列表"))
 nt.mac_hints(function(mac, name) a :value(mac, "%s (%s)" %{ mac, name }) end)
 a.rmempty = true
@@ -334,6 +333,7 @@ a = s:taboption("disturb", DynamicList, "serverchan_blacklist", translate("关�
 nt.mac_hints(function(mac, name) a:value(mac, "%s (%s)" %{ mac, name }) end)
 a.rmempty = true
 a:depends({macmechanism="block"})
+a.description = translate("AA:AA:AA:AA:AA:AA\\|BB:BB:BB:BB:BB:B 可以将多个 MAC 视为同一用户")
 
 a = s:taboption("disturb", ListValue, "serverchan_interface", translate("接口名称"))
 a:depends({macmechanism="interface"})
@@ -350,5 +350,21 @@ for _, iface in ipairs(ifaces) do
 		a:value(iface, ((#nets > 0) and "%s (%s)" % {iface, nets} or iface))
 	end
 end
+
+a=s:taboption("disturb", ListValue,"macmechanism2",translate("MAC过滤2"))
+a:value("",translate("disable"))
+a:value("MAC_online",translate("任意设备在线时免打扰"))
+a:value("MAC_offline",translate("设备全部离线时免打扰"))
+a.rmempty = true
+
+a = s:taboption("disturb", DynamicList, "MAC_online_list", translate("在线免打扰列表"))
+nt.mac_hints(function(mac, name) a:value(mac, "%s (%s)" %{ mac, name }) end)
+a.rmempty = true
+a:depends({macmechanism2="MAC_online"})
+
+a = s:taboption("disturb", DynamicList, "MAC_offline_list", translate("任意离线免打扰列表"))
+nt.mac_hints(function(mac, name) a:value(mac, "%s (%s)" %{ mac, name }) end)
+a.rmempty = true
+a:depends({macmechanism2="MAC_offline"})
 
 return m
