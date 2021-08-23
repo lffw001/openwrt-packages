@@ -158,7 +158,7 @@ end
 -- o = s:option(DummyValue, "_name", translate("Container Name"))
 -- o.rawhtml = true
 
-o = s:option(DummyValue, "_id_name", translate("容器信息"))
+o = s:option(DummyValue, "_id_name", translate("Container Info"))
 o.rawhtml = true
 o.width="15%"
 
@@ -172,7 +172,7 @@ o.width="10%"
 o = s:option(DummyValue, "_ports", translate("Ports"))
 o.width="5%"
 o.rawhtml = true
-o = s:option(DummyValue, "_mounts", translate("挂载"))
+o = s:option(DummyValue, "_mounts", translate("Mounts"))
 o.width="25%"
 o.rawhtml = true
 
