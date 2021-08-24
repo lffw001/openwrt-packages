@@ -32,7 +32,7 @@ else
 	status = translate("<strong class=\"koolproxy_status\"><font color=\"red\">GodProxy滤广告  未运行</font></strong>")
 end
 
-o = Map("koolproxy", translate("GodProxy滤广告 "), translate("GodProxy是基于KoolProxyR Plus重新整理的能识别adblock规则的免费开源软件,追求体验更快、更清洁的网络，屏蔽烦人的广告！<br /><font color=\"red\">屏蔽了内置视频规则的更新，固化为旧版，可正常运行。其余规则可正常更新，正常运行。<br /></font>"))
+o = Map("koolproxy", translate("GodProxy滤广告 "), translate("GodProxy是基于KoolProxyR Plus重新整理的能识别adblock规则的免费开源软件,追求体验更快、更清洁的网络，屏蔽烦人的广告！<br /><font color=\"red\">屏蔽了内置视频规则的更新，内置可用版本，可正常运行。其余规则可正常更新且正常运行。<br /></font>"))
 
 o.template="koolproxy/koolproxy_status"
 t = o:section(TypedSection, "global")
