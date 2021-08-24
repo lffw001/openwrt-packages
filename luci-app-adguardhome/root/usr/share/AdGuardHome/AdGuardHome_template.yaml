@@ -53,46 +53,34 @@ tls:
   certificate_path: ""
   private_key_path: ""
 filters:
+- enabled: false
+  url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
+  name: anti-AD
+  id: 1603340680
 - enabled: true
-  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-  name: AdGuard Simplified Domain Names filter
-  id: 1
+  url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad.txt
+  name: halflife-移动端
+  id: 1614320935
 - enabled: true
-  url: https://adaway.org/hosts.txt
+  url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad-edentw.txt
+  name: halflife-ad-edentw
+  id: 1614320937
+- enabled: true
+  url: https://halflife.coding.net/p/list/d/list/git/raw/master/ad-pc.txt
+  name: halflife-PC端
+  id: 1614327142
+- enabled: true
+  url: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
   name: AdAway
-  id: 2
-- enabled: false
-  url: https://hosts-file.net/ad_servers.txt
-  name: hpHosts - Ad and Tracking servers only
-  id: 3
+  id: 1614411351
 - enabled: true
-  url: https://www.malwaredomainlist.com/hostslist/hosts.txt
-  name: MalwareDomainList.com Hosts List
-  id: 4
+  url: https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/full/hosts.txt
+  name: neoHosts
+  id: 1614411352
 - enabled: false
-  url: https://raw.githubusercontent.com/vokins/yhosts/master/data/tvbox.txt
-  name: tvbox
-  id: 1575018007
-- enabled: true
-  url: https://hosts.nfz.moe/full/hosts
-  name: neoHosts full
-  id: 1575618240
-- enabled: false
-  url: https://hosts.nfz.moe/basic/hosts
-  name: neoHosts basic
-  id: 1575618241
-- enabled: false
-  url: http://sbc.io/hosts/hosts
-  name: StevenBlack host basic
-  id: 1575618242
-- enabled: false
-  url: http://sbc.io/hosts/alternates/fakenews-gambling-porn-social/hosts
-  name: StevenBlack host+fakenews + gambling + porn + social
-  id: 1575618243
-- enabled: false
-  url: https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD/anti-ad-easylist.txt
-  name: anti-AD(Adblock+neohosts+yhosts+cjxlist+adhlist)
-  id: 1577113202
+  url: https://hblock.molinero.dev/hosts_adblock.txt
+  name: Hblock
+  id: 1629560972
 user_rules: []
 dhcp:
   enabled: false
