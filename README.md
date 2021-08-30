@@ -10,23 +10,29 @@
 |插件名|功能|
 | :----: | :----: |
 | docker-op | openwrt的docker全套 |
-| k3screenctrl | 斐讯K3屏幕套件 |
-| k3screenctrl_build | 斐讯K3屏幕套件 |
 | luci-app-k3screenctrl | 斐讯K3屏幕控制 |
-| luci-app-autotimeset | 定时设置(重启、关机等) |
-| luci-app-godproxy | kpr去广告 |
-| luci-app-poweroff | 单独的关机 |
-| luci-app-smartdns | smartdns插件 |
-| smartdns | smartdns依赖 |
+| k3screenctrl_build | 斐讯K3屏幕套件 |
+| k3screenctrl | 斐讯K3屏幕套件 |
+| luci-app-k3usb | 斐讯K3 USB控制 |
+| luci-app-autotimeset | 定时设置 |
+| luci-app-godproxy | KPR去广告 |
+| luci-app-adblock-plus | DNS去广告 |
+| luci-app-poweroff | 关机 |
+| luci-app-smartdns | SmartDNS |
+| smartdns | SmartDNS依赖 |
 | luci-app-syncdial | 支持ipv6的多拨 |
 | luci-app-adguardhome | ADG去广告 |
 | luci-app-homeconnect | IPSecVPN客户端 |
-| luci-app-homeredirect | 端口转发工具 |
+| luci-app-homeredirect | 端口转发 |
 | luci-app-diskman | 磁盘管理 |
-| luci-app-eqos | eqos简单IP限速控制服务 |
-| luci-app-advanced | 高级设置，可直接修改某些配置 |
-| luci-app-serverchan | Server酱微信/Telegram 推送的插件 |
-| luci-app-adblock-plus | 去广告 |
+| luci-app-eqos | 简单IP限速控制 |
+| luci-app-advanced | 高级设置 |
+| luci-app-serverchan | 微信推送 |
+| luci-app-pushbot | 全能推送 |
+| qb | qBittorrent下载器 |
+| theme | Luci18.06主题 |
+| redsocks2 | SSRP依赖 |
+| luci-app-cpufreq | 某设备CPU频率调节 |
 
 
 ## 提醒：
