@@ -10,6 +10,8 @@
 |插件名|功能|
 | :----: | :----: |
 | docker-op | openwrt的docker全套 |
+| nas/luci-app-ddnsto | 内网穿透 |
+| nas/luci-app-linkease | 易有云 |
 | luci-app-k3screenctrl | 斐讯K3屏幕控制 |
 | k3screenctrl_build | 斐讯K3屏幕套件 |
 | k3screenctrl | 斐讯K3屏幕套件 |
