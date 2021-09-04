@@ -5,9 +5,8 @@ function index()
 	if not nixio.fs.access("/etc/config/cpulimit") then
 		return
 	end
-	
-	local page = entry({"admin", "system", "cpulimit"}, cbi("cpulimit"), luci.i18n.translate("cpulimit"), 65)
-	page.i18n = "cpulimit"
+        entry({"admin", "system"}, firstchild(), "System", 44).dependent = false
+	local page = entry({"admin", "system", "cpulimit"}, cbi("cpulimit"), _("CPU limit"), 65)
 	page.dependent = true
-	
+
 end
