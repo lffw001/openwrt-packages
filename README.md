@@ -21,7 +21,6 @@
 | luci-app-adblock-plus | DNS去广告 |
 | luci-app-poweroff | 关机 |
 | luci-app-smartdns | SmartDNS |
-| smartdns | SmartDNS依赖 |
 | luci-app-syncdial | 支持ipv6的多拨 |
 | luci-app-adguardhome | ADG去广告 |
 | luci-app-homeconnect | IPSecVPN客户端 |
@@ -33,8 +32,8 @@
 | luci-app-pushbot | 全能推送 |
 | qb | qBittorrent下载器 |
 | theme | Luci18.06主题 |
-| redsocks2 | SSRP依赖 |
 | luci-app-cpufreq | 某设备CPU频率调节 |
+| luci-app-cpulimit | CPU占用率限制 |
 
 
 ## 提醒：
