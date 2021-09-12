@@ -9,13 +9,19 @@
 
 |插件名|功能|
 | :----: | :----: |
-| docker-op | openwrt的docker全套 |
+| docker-op/luci-app-dockerman | openwrt的Docker管理工具 |
+| docker-op/luci-lib-docker | dockerman依赖 |
+| aria2-op/luci-app-aria2 | openwrt的aria2下载工具 |
+| aria2-op/aria2 | aria2依赖 |
+| aria2-op/ariang | aria2的Ng管理 |
 | nas/luci-app-ddnsto | 内网穿透 |
 | nas/luci-app-linkease | 易有云 |
-| luci-app-k3screenctrl | 斐讯K3屏幕控制 |
-| k3screenctrl_build | 斐讯K3屏幕套件 |
-| k3screenctrl | 斐讯K3屏幕套件 |
-| luci-app-k3usb | 斐讯K3 USB控制 |
+| k3/luci-app-k3screenctrl | 斐讯K3屏幕控制 |
+| k3/k3screenctrl_build | 斐讯K3屏幕套件 |
+| k3/k3screenctrl | 斐讯K3屏幕套件 |
+| k3/luci-app-k3usb | 斐讯K3 USB控制 |
+| qbittorrent | openwrt的qBittorrent下载器 |
+| theme-18.06 | openwrt-Luci18.06主题 |
 | luci-app-autotimeset | 定时设置 |
 | luci-app-godproxy | KPR去广告 |
 | luci-app-adblock-plus | DNS去广告 |
@@ -30,10 +36,9 @@
 | luci-app-advanced | 高级设置 |
 | luci-app-serverchan | 微信推送 |
 | luci-app-pushbot | 全能推送 |
-| qb | qBittorrent下载器 |
-| theme | Luci18.06主题 |
-| luci-app-cpufreq | 某设备CPU频率调节 |
 | luci-app-cpulimit | CPU占用率限制 |
+| luci-app-cpufreq | 某设备CPU频率调节 |
+| redsocks2 | 大雕ssr-plus的依赖，某些源码无 |
 
 
 ## 提醒：
