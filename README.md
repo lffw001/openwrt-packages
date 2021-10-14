@@ -38,7 +38,7 @@
 | luci-app-pushbot | 全能推送 |
 | luci-app-cpulimit | CPU占用率限制 |
 | luci-app-cpufreq | 某设备CPU频率调节 |
-| redsocks2 | 大雕ssr-plus的依赖，某些源码无 |
+
 
 
 ## 提醒：
