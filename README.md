@@ -16,9 +16,7 @@
 | aria2-op/ariang | aria2的Ng管理 |
 | nas/luci-app-ddnsto | 内网穿透 |
 | nas/luci-app-linkease | 易有云 |
-| k3/luci-app-k3screenctrl | 斐讯K3屏幕控制 |
-| k3/k3screenctrl_build | 斐讯K3屏幕套件 |
-| k3/k3screenctrl | 斐讯K3屏幕套件 |
+| k3/k3screenctrl * | 斐讯K3屏幕控制 |
 | k3/luci-app-k3usb | 斐讯K3 USB控制 |
 | qbittorrent | openwrt的qBittorrent下载器 |
 | theme-18.06 | openwrt-Luci18.06主题 |
@@ -39,7 +37,8 @@
 | luci-app-cpulimit | CPU占用率限制 |
 | luci-app-cpufreq | 某设备CPU频率调节 |
 | luci-app-aliyundrive-webdav | 阿里云盘webdav |
-
+| luci-app-homebox | 简单的局域网测速 |
+| luci-app-gowebdav | WebDav服务端 |
 
 ## 提醒：
 
