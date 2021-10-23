@@ -39,6 +39,11 @@
 | luci-app-aliyundrive-webdav | 阿里云盘webdav |
 | luci-app-homebox | 简单的局域网测速 |
 | luci-app-gowebdav | WebDav服务端 |
+| jerrykuku/luci-app-go-aliyundrive-webdav | Go阿里云盘webdav |
+| jerrykuku/luci-app-argon * | Argon主题 |
+| jerrykuku/luci-app-argon-config | Argon主题配置 |
+| jerrykuku/luci-app-jd-dailybonus | JD签到 |
+
 
 ## 提醒：
 
