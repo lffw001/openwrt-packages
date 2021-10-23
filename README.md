@@ -43,6 +43,9 @@
 | jerrykuku/luci-app-argon * | Argon主题 |
 | jerrykuku/luci-app-argon-config | Argon主题配置 |
 | jerrykuku/luci-app-jd-dailybonus | JD签到 |
+| nas/luci-app-ddnsto | ddnsto穿透 |
+| nas/luci-app-linkease | 易有云 |
+
 
 
 ## 提醒：
