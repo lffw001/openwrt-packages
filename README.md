@@ -23,6 +23,7 @@
 | luci-app-poweroff | 关机 |
 | luci-app-syncdial | 支持ipv6的多拨 |
 | luci-app-serverchan | 微信推送 |
+| luci-app-tcpdump | LUCI tcpdump |
 | aliyun/ * | 阿里云盘webdav |
 | aria2-op/ * | openwrt的aria2下载工具 |
 | cpulimit-op/ * | CPU占用率限制 |
