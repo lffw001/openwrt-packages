@@ -1,8 +1,8 @@
 msgid "Tcpdump"
-msgstr "Tcpdump 流量监控"
+msgstr "Tcpdump流量监控"
 
 msgid "Start network capture"
-msgstr "Tcpdump 流量监控"
+msgstr "Tcpdump流量监控"
 
 msgid "Interface"
 msgstr "捕获指定的接口"
