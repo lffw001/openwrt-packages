@@ -28,6 +28,7 @@
 | aria2-op/ * | openwrt的aria2下载工具 |
 | cpulimit-op/ * | CPU占用率限制 |
 | docker-op/ * | Docker工具 |
+| FileBrowser/ * | 基于Go的在线文件管理器 |
 | homebox-op/ * | 简单的局域网测速 |
 | homelede/luci-app-homeconnect | IPSecVPN客户端 |
 | homelede/luci-app-homeredirect | 端口转发 |
