@@ -12,7 +12,7 @@
 | luci-app-advanced | 高级设置 |
 | luci-app-autotimeset | 定时设置 |
 | luci-app-adguardhome | ADG去广告 |
-| luci-app-cpufreq | 某设备CPU频率调节 |
+| luci-app-cpufreq | ARM设备CPU频率调节 |
 | luci-app-diskman | 磁盘管理 |
 | luci-app-eqos | 简单IP限速控制 |
 | luci-app-easymesh | 简单Mesh |
