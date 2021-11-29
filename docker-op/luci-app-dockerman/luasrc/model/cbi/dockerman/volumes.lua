@@ -34,7 +34,7 @@ function get_volumes()
 		data[index]["_mountpoint"] = nil
 
 		for v1 in v.Mountpoint:gmatch('[^/]+') do
-			if v1 == index then 
+			if v1 == index then
 				data[index]["_mountpoint"] = data[index]["_mountpoint"] .."/" .. v1:sub(1,12) .. "..."
 			else
 				data[index]["_mountpoint"] = (data[index]["_mountpoint"] and data[index]["_mountpoint"] or "").."/".. v1
@@ -46,6 +46,7 @@ function get_volumes()
 
 	return data
 end
+
 if dk:_ping().code ~= 200 then
 	lost_state = true
 else
@@ -93,7 +94,7 @@ o = s:option(DummyValue, "_created", translate("Created"))
 s = m:section(SimpleSection)
 s.template = "dockerman/apply_widget"
 s.err=docker:read_status()
-s.err=s.err and s.err:gsub("\n","<br />"):gsub(" ","&#160;")
+s.err=s.err and s.err:gsub("\n","<br>"):gsub(" ","&nbsp;")
 if s.err then
 	docker:clear_status()
 end
