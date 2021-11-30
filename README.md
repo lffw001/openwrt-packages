@@ -16,7 +16,7 @@
 | luci-app-diskman | 磁盘管理 |
 | luci-app-eqos | 简单IP限速控制 |
 | luci-app-easymesh | 简单Mesh |
-| luci-app-godproxy | KPR去广告 |
+| luci-app-ikoolproxy | KPR去广告 |
 | luci-app-netdata | netdata监测 |
 | luci-app-iperf3-server | iperf3服务端 |
 | luci-app-pushbot | 全能推送 |
