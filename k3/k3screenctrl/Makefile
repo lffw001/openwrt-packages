@@ -2,11 +2,11 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=k3screenctrl
 PKG_VERSION:=0.10
-PKG_RELEASE:=3
+PKG_RELEASE:=4
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/likanchen/k3screenctrl.git
-PKG_SOURCE_VERSION:=4dc3b74528af49e3343fdce257d4d548464fe671
+PKG_SOURCE_URL:=https://github.com/xiangfeidexiaohuo/k3screenctrl.git
+PKG_SOURCE_VERSION:=7981b8c1b0352ca09d811a081d1201f765bc0f12
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_SOURCE_VERSION)
 PKG_SOURCE:=$(PKG_SOURCE_SUBDIR).tar.xz
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_SOURCE_SUBDIR)
@@ -21,7 +21,7 @@ define Package/k3screenctrl
   CATEGORY:=Utilities
   DEPENDS:= +@KERNEL_DEVMEM +coreutils +coreutils-od +bash +curl
   TITLE:=LCD screen controller on PHICOMM K3
-  URL:=https://github.com/likanchen/k3screenctrl.git
+  URL:=https://github.com/xiangfeidexiaohuo/k3screenctrl.git
 endef
 
 define Package/k3screenctrl/description
