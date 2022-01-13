@@ -1,0 +1,82 @@
+name: Update
+
+on: 
+  repository_dispatch:
+  workflow_dispatch:
+
+# 定时触发编译
+  schedule:
+    - cron: 0 0,8,16 * * *
+
+# 点赞☆Star触发编译
+#  watch:
+#    types: [started]
+
+jobs:
+  Update:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Clone Repository
+      uses: actions/checkout@v2
+
+    - name: Set git
+      run : |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        sudo timedatectl set-timezone "Asia/Shanghai"
+        
+    - name: Update
+      run: |
+
+        rm -rf ./aliyun/*
+        rm -rf ./luci-app-pushbot
+        rm -rf ./luci-app-serverchan
+        rm -rf ./luci-app-adblock-plus
+        rm -rf ./luci-app-easymesh
+        rm -rf ./docker-op/luci-lib-docker
+        rm -rf ./nas/*
+        rm -rf ./jerrykuku/luci-app-vssr
+        rm -rf ./jerrykuku/lua-maxminddb
+        rm -rf ./jerrykuku/luci-app-jd-dailybonus
+        rm -rf ./jerrykuku/luci-app-go-aliyundrive-webdav
+        rm -rf ./jerrykuku/go-aliyundrive-webdav
+        rm -rf ./aria2-op/aria2
+        rm -rf ./aria2-op/ariang
+        rm -rf ./theme-18.06/luci-theme-edge
+        rm -rf ./theme-18.06/luci-theme-infinityfreedom
+        rm -rf ./FileBrowser/filebrowser
+        rm -rf ./luci-app-ikoolproxy
+        rm -rf ./luci-app-kodexplorer
+
+        svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./aliyun/aliyundrive-webdav
+        svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./aliyun/luci-app-aliyundrive-webdav
+        svn export https://github.com/zzsj0928/luci-app-pushbot/trunk/ ./luci-app-pushbot
+        svn export https://github.com/tty228/luci-app-serverchan/trunk/ ./luci-app-serverchan
+        svn export https://github.com/small-5/luci-app-adblock-plus/branches/18.06/ ./luci-app-adblock-plus
+        svn export https://github.com/ntlf9t/luci-app-easymesh/trunk/ ./luci-app-easymesh
+        svn export https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker ./docker-op/luci-lib-docker
+        svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto ./nas/luci-app-ddnsto
+        svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease ./nas/luci-app-linkease
+        svn export https://github.com/linkease/nas-packages/trunk/network/services/ddnsto ./nas/ddnsto
+        svn export https://github.com/linkease/nas-packages/trunk/network/services/linkease ./nas/linkease
+        svn export https://github.com/linkease/istore/trunk/luci/luci-app-store ./nas/luci-app-store
+        svn export https://github.com/linkease/istore-ui/trunk/app-store-ui ./nas/app-store-ui
+        svn export https://github.com/jerrykuku/luci-app-vssr/trunk/ ./jerrykuku/luci-app-vssr
+        svn export https://github.com/jerrykuku/lua-maxminddb/trunk/ ./jerrykuku/lua-maxminddb
+        svn export https://github.com/jerrykuku/luci-app-jd-dailybonus/trunk/ ./jerrykuku/luci-app-jd-dailybonus
+        svn export https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/trunk/ ./jerrykuku/luci-app-go-aliyundrive-webdav
+        svn export https://github.com/jerrykuku/go-aliyundrive-webdav/trunk/ ./jerrykuku/go-aliyundrive-webdav
+        svn export https://github.com/openwrt/packages/trunk/net/aria2 ./aria2-op/aria2
+        svn export https://github.com/openwrt/packages/trunk/net/ariang ./aria2-op/ariang
+        svn export https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom/trunk/luci-theme-infinityfreedom ./theme-18.06/luci-theme-infinityfreedom
+        svn export https://github.com/kiddin9/luci-theme-edge/branches/18.06/ ./theme-18.06/luci-theme-edge
+        svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser ./FileBrowser/filebrowser
+        svn export https://github.com/iwrt/luci-app-ikoolproxy/trunk/ ./luci-app-ikoolproxy
+        svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer ./luci-app-kodexplorer
+
+
+    - name: Apply
+      run: |
+        git add .
+        git commit -m "Sync: $(date +%Y-%m-%d" "%H:%M)"
+        git push -f 
