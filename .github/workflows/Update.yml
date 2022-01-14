@@ -35,11 +35,7 @@ jobs:
         rm -rf ./luci-app-easymesh
         rm -rf ./docker-op/luci-lib-docker
         rm -rf ./nas/*
-        rm -rf ./jerrykuku/luci-app-vssr
-        rm -rf ./jerrykuku/lua-maxminddb
-        rm -rf ./jerrykuku/luci-app-jd-dailybonus
-        rm -rf ./jerrykuku/luci-app-go-aliyundrive-webdav
-        rm -rf ./jerrykuku/go-aliyundrive-webdav
+        rm -rf ./jerrykuku/*
         rm -rf ./aria2-op/aria2
         rm -rf ./aria2-op/ariang
         rm -rf ./theme-18.06/luci-theme-edge
@@ -50,28 +46,31 @@ jobs:
 
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./aliyun/aliyundrive-webdav
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./aliyun/luci-app-aliyundrive-webdav
-        svn export https://github.com/zzsj0928/luci-app-pushbot/trunk/ ./luci-app-pushbot
-        svn export https://github.com/tty228/luci-app-serverchan/trunk/ ./luci-app-serverchan
-        svn export https://github.com/small-5/luci-app-adblock-plus/branches/18.06/ ./luci-app-adblock-plus
-        svn export https://github.com/ntlf9t/luci-app-easymesh/trunk/ ./luci-app-easymesh
+        git clone https://github.com/zzsj0928/luci-app-pushbot ./luci-app-pushbot
+        git clone https://github.com/tty228/luci-app-serverchan ./luci-app-serverchan
+        git clone https://github.com/small-5/luci-app-adblock-plus -b 18.06 ./luci-app-adblock-plus
+        git clone https://github.com/ntlf9t/luci-app-easymesh ./luci-app-easymesh
         svn export https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker ./docker-op/luci-lib-docker
         svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto ./nas/luci-app-ddnsto
         svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease ./nas/luci-app-linkease
         svn export https://github.com/linkease/nas-packages/trunk/network/services/ddnsto ./nas/ddnsto
         svn export https://github.com/linkease/nas-packages/trunk/network/services/linkease ./nas/linkease
         svn export https://github.com/linkease/istore/trunk/luci/luci-app-store ./nas/luci-app-store
-        svn export https://github.com/linkease/istore-ui/trunk/app-store-ui ./nas/app-store-ui
-        svn export https://github.com/jerrykuku/luci-app-vssr/trunk/ ./jerrykuku/luci-app-vssr
-        svn export https://github.com/jerrykuku/lua-maxminddb/trunk/ ./jerrykuku/lua-maxminddb
-        svn export https://github.com/jerrykuku/luci-app-jd-dailybonus/trunk/ ./jerrykuku/luci-app-jd-dailybonus
-        svn export https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/trunk/ ./jerrykuku/luci-app-go-aliyundrive-webdav
-        svn export https://github.com/jerrykuku/go-aliyundrive-webdav/trunk/ ./jerrykuku/go-aliyundrive-webdav
+        svn export https://github.com/linkease/istore-ui/trunk/app-store-ui ./nas/app-store-ui       
+        git clone https://github.com/jerrykuku/luci-app-vssr ./jerrykuku/luci-app-vssr
+        git clone https://github.com/jerrykuku/lua-maxminddb ./jerrykuku/lua-maxminddb
+        git clone https://github.com/jerrykuku/luci-app-jd-dailybonus ./jerrykuku/luci-app-jd-dailybonus
+        git clone https://github.com/jerrykuku/luci-theme-argon ./jerrykuku/luci-theme-argon
+        git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 ./jerrykuku/luci-theme-argon-18.06
+        git clone https://github.com/jerrykuku/luci-app-argon-config ./jerrykuku/luci-app-argon-config
+        git clone https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav ./jerrykuku/luci-app-go-aliyundrive-webdav
+        git clone https://github.com/jerrykuku/go-aliyundrive-webdav ./jerrykuku/go-aliyundrive-webdav        
         svn export https://github.com/openwrt/packages/trunk/net/aria2 ./aria2-op/aria2
-        svn export https://github.com/openwrt/packages/trunk/net/ariang ./aria2-op/ariang
+        svn export https://github.com/openwrt/packages/trunk/net/ariang ./aria2-op/ariang       
         svn export https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom/trunk/luci-theme-infinityfreedom ./theme-18.06/luci-theme-infinityfreedom
-        svn export https://github.com/kiddin9/luci-theme-edge/branches/18.06/ ./theme-18.06/luci-theme-edge
+        git clone https://github.com/kiddin9/luci-theme-edge -b 18.06 ./theme-18.06/luci-theme-edge        
         svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser ./FileBrowser/filebrowser
-        svn export https://github.com/iwrt/luci-app-ikoolproxy/trunk/ ./luci-app-ikoolproxy
+        git clone https://github.com/iwrt/luci-app-ikoolproxy ./luci-app-ikoolproxy
         svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer ./luci-app-kodexplorer
 
 
