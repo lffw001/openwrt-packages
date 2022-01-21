@@ -70,7 +70,7 @@ jobs:
         svn export https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom/trunk/luci-theme-infinityfreedom ./theme-18.06/luci-theme-infinityfreedom
         git clone https://github.com/kiddin9/luci-theme-edge -b 18.06 ./theme-18.06/luci-theme-edge        
         svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser ./FileBrowser/filebrowser
-        git clone https://github.com/iwrt/luci-app-ikoolproxy ./luci-app-ikoolproxy
+        git clone https://github.com/1wrt/luci-app-ikoolproxy ./luci-app-ikoolproxy
         svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer ./luci-app-kodexplorer
 
 
