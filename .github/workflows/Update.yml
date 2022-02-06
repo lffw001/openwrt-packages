@@ -43,6 +43,7 @@ jobs:
         rm -rf ./FileBrowser/filebrowser
         rm -rf ./luci-app-ikoolproxy
         rm -rf ./luci-app-kodexplorer
+        rm -rf ./v2/*
 
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./aliyun/aliyundrive-webdav
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./aliyun/luci-app-aliyundrive-webdav
@@ -72,6 +73,8 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser ./FileBrowser/filebrowser
         git clone https://github.com/1wrt/luci-app-ikoolproxy ./luci-app-ikoolproxy
         svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer ./luci-app-kodexplorer
+        svn export https://github.com/zxlhhyccc/bf-package-master/trunk/ctcgfw/v2raya ./v2/v2raya
+        svn export https://github.com/zxlhhyccc/bf-package-master/trunk/zxlhhyccc/luci-app-v2raya ./v2/luci-app-v2raya
 
 
     - name: Apply
