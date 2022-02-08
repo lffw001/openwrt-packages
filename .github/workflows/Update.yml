@@ -44,6 +44,8 @@ jobs:
         rm -rf ./luci-app-ikoolproxy
         rm -rf ./luci-app-kodexplorer
         rm -rf ./v2/*
+        rm -rf ./luci-app-openclash
+        rm -rf ./OpenAppFilter/*
 
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./aliyun/aliyundrive-webdav
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./aliyun/luci-app-aliyundrive-webdav
@@ -75,6 +77,8 @@ jobs:
         svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer ./luci-app-kodexplorer
         svn export https://github.com/zxlhhyccc/bf-package-master/trunk/ctcgfw/v2raya ./v2/v2raya
         svn export https://github.com/zxlhhyccc/bf-package-master/trunk/zxlhhyccc/luci-app-v2raya ./v2/luci-app-v2raya
+        svn checkout https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash ./luci-app-openclash
+        git clone https://github.com/destan19/OpenAppFilter ./OpenAppFilter
 
 
     - name: Apply
