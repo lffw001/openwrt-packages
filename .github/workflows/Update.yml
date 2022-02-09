@@ -46,6 +46,8 @@ jobs:
         rm -rf ./v2/*
         rm -rf ./luci-app-openclash
         rm -rf ./OpenAppFilter/*
+        rm -rf ./luci-app-diskman
+        rm -rf ./docker-op/luci-app-dockerman
 
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./aliyun/aliyundrive-webdav
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./aliyun/luci-app-aliyundrive-webdav
@@ -79,6 +81,8 @@ jobs:
         svn export https://github.com/zxlhhyccc/bf-package-master/trunk/zxlhhyccc/luci-app-v2raya ./v2/luci-app-v2raya
         svn checkout https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash ./luci-app-openclash
         git clone https://github.com/destan19/OpenAppFilter ./OpenAppFilter
+        svn export https://github.com/lisaac/luci-app-diskman/trunk/applications/luci-app-diskman ./luci-app-diskman
+        svn export https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman ./docker-op/luci-app-dockerman
 
 
     - name: Apply
