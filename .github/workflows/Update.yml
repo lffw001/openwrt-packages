@@ -48,6 +48,7 @@ jobs:
         rm -rf ./OpenAppFilter/*
         rm -rf ./luci-app-diskman
         rm -rf ./docker-op/luci-app-dockerman
+        rm -rf ./theme-18.06/luci-theme-neobird
 
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./aliyun/aliyundrive-webdav
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./aliyun/luci-app-aliyundrive-webdav
@@ -83,6 +84,7 @@ jobs:
         git clone https://github.com/destan19/OpenAppFilter ./OpenAppFilter
         svn export https://github.com/lisaac/luci-app-diskman/trunk/applications/luci-app-diskman ./luci-app-diskman
         svn export https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman ./docker-op/luci-app-dockerman
+        git clone https://github.com/xiangfeidexiaohuo/luci-theme-neobird ./theme-18.06/luci-theme-neobird
 
 
     - name: Apply
