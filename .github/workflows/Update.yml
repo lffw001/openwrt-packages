@@ -84,7 +84,7 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filebrowser ./op-fileBrowser/luci-app-filebrowser
         
         svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./op-aliyun_webdav/aliyundrive-webdav
-svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./op-aliyun_webdav/luci-app-aliyundrive-webdav
+        svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./op-aliyun_webdav/luci-app-aliyundrive-webdav
         
         
         
