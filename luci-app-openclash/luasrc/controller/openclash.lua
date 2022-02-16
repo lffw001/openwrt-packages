@@ -60,9 +60,11 @@ function index()
 	entry({"admin", "services", "openclash", "switch_rule_mode"}, call("action_switch_rule_mode"))
 	entry({"admin", "services", "openclash", "switch_run_mode"}, call("action_switch_run_mode"))
 	entry({"admin", "services", "openclash", "get_run_mode"}, call("action_get_run_mode"))
+	entry({"admin", "services", "openclash", "create_file"}, call("create_file"))
 	entry({"admin", "services", "openclash", "settings"},cbi("openclash/settings"),_("Global Settings"), 30).leaf = true
 	entry({"admin", "services", "openclash", "servers"},cbi("openclash/servers"),_("Servers and Groups"), 40).leaf = true
 	entry({"admin", "services", "openclash", "other-rules-edit"},cbi("openclash/other-rules-edit"), nil).leaf = true
+	entry({"admin", "services", "openclash", "other-file-edit"},cbi("openclash/other-file-edit"), nil).leaf = true
 	entry({"admin", "services", "openclash", "rule-providers-settings"},cbi("openclash/rule-providers-settings"),_("Rule Providers and Groups"), 50).leaf = true
 	entry({"admin", "services", "openclash", "game-rules-manage"},form("openclash/game-rules-manage"), nil).leaf = true
 	entry({"admin", "services", "openclash", "rule-providers-manage"},form("openclash/rule-providers-manage"), nil).leaf = true
@@ -1049,6 +1051,7 @@ function action_refresh_log()
    				local a = string.find (line, "【")
    				local b = string.find (line, "】") + 2
    				local c = 21
+   				local d = 0
    				local v
    				local x
    				while true do
@@ -1065,16 +1068,23 @@ function action_refresh_log()
    					x = no_trans[k]
    					v = no_trans[k+1]
    					if x <= 21 then
-   						line_trans = line_trans .. string.sub(line, 0, v)
+   						line_trans = line_trans .. luci.i18n.translate(string.sub(line, d, x - 1)) .. string.sub(line, x, v)
+   						d = v + 1
    					elseif v <= string.len(line) then
    						line_trans = line_trans .. luci.i18n.translate(string.sub(line, c, x - 1)) .. string.sub(line, x, v)
    					end
    					c = v + 1
    				end
    				if c > string.len(line) then
-   					line_trans = string.sub(line, 0, 20) .. line_trans
+   					if d == 0 then
+   						line_trans = string.sub(line, 0, 20) .. line_trans
+   					end
    				else
-   					line_trans = string.sub(line, 0, 20) .. line_trans .. luci.i18n.translate(string.sub(line, c, -1))
+   					if d == 0 then
+   						line_trans = string.sub(line, 0, 20) .. line_trans .. luci.i18n.translate(string.sub(line, c, -1))
+   					else
+   						line_trans = line_trans .. luci.i18n.translate(string.sub(line, c, -1))
+   					end
    				end
    			end
 			end
@@ -1244,5 +1254,16 @@ function ltn12_popen(command)
 		fdi:close()
 		fdo:close()
 		nixio.exec("/bin/sh", "-c", command)
+	end
+end
+
+function create_file()
+	local file_name = luci.http.formvalue("filename")
+	local file_path = luci.http.formvalue("filepath")..file_name
+	fs.writefile(file_path, "")
+	if fs.isfile(file_path) then
+		return
+	else
+		luci.http.status(500, "Create File Faild")
 	end
 end
