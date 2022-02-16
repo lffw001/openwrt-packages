@@ -7,12 +7,13 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=LuCI support for FileBrowser
-PKG_NAME:=luci-app-filebrowser
+LUCI_TITLE:=LuCI Support for FileBrowser
 LUCI_DEPENDS:=+filebrowser
 LUCI_PKGARCH:=all
-PKG_VERSION:=1.0
-PKG_RELEASE:=1
+
+PKG_NAME:=luci-app-filebrowser
+
+PKG_LICENSE:=GPLv3
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
