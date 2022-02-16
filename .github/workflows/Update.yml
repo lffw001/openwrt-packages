@@ -44,7 +44,7 @@ jobs:
         rm -rf ./theme-18.06/luci-theme-edge
         rm -rf ./theme-18.06/luci-theme-infinityfreedom
         rm -rf ./theme-18.06/luci-theme-neobird
-        rm -rf ./op-fileBrowser/filebrowser
+        rm -rf ./op-fileBrowser/*
 
  
         git clone https://github.com/zzsj0928/luci-app-pushbot ./luci-app-pushbot
@@ -83,7 +83,8 @@ jobs:
         git clone https://github.com/kiddin9/luci-theme-edge -b 18.06 ./theme-18.06/luci-theme-edge 
         git clone https://github.com/xiangfeidexiaohuo/luci-theme-neobird ./theme-18.06/luci-theme-neobird
                          
-        svn export https://github.com/immortalwrt/packages/trunk/utils/filebrowser ./op-fileBrowser/filebrowser
+        svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser ./op-fileBrowser/filebrowser
+        svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filebrowser ./op-fileBrowser/luci-app-filebrowser
         
         
         
