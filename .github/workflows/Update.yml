@@ -35,17 +35,16 @@ jobs:
         rm -rf ./luci-app-ikoolproxy
         rm -rf ./luci-app-kodexplorer
         rm -rf ./luci-app-openclash
-        rm -rf ./luci-lib-docker
-        rm -rf ./luci-app-diskman
-        rm -rf ./luci-app-dockerman   
-        rm -rf ./linkease/*
-        rm -rf ./jerrykuku/*
-        rm -rf ./op-oaf
         rm -rf ./theme-18.06/luci-theme-edge
         rm -rf ./theme-18.06/luci-theme-infinityfreedom
         rm -rf ./theme-18.06/luci-theme-neobird
+        rm -rf ./lisaac/*  
+        rm -rf ./linkease/*
+        rm -rf ./jerrykuku/*
+        rm -rf ./op-oaf
         rm -rf ./op-fileBrowser/*
-
+        rm -rf ./op-aliyun_webdav/*
+        
  
         git clone https://github.com/zzsj0928/luci-app-pushbot ./luci-app-pushbot
         git clone https://github.com/tty228/luci-app-serverchan ./luci-app-serverchan
@@ -55,9 +54,9 @@ jobs:
         svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-kodexplorer ./luci-app-kodexplorer
         svn checkout https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash ./luci-app-openclash
         
-        svn export https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker ./luci-lib-docker
-        svn export https://github.com/lisaac/luci-app-diskman/trunk/applications/luci-app-diskman ./luci-app-diskman
-        svn export https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman ./luci-app-dockerman
+        svn export https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker ./lisaac/luci-lib-docker
+        svn export https://github.com/lisaac/luci-app-diskman/trunk/applications/luci-app-diskman ./lisaac/luci-app-diskman
+        svn export https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman ./lisaac/luci-app-dockerman
         
         svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto ./linkease/luci-app-ddnsto
         svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease ./linkease/luci-app-linkease
@@ -74,8 +73,6 @@ jobs:
         git clone https://github.com/jerrykuku/luci-theme-argon ./jerrykuku/luci-theme-argon
         git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06 ./jerrykuku/luci-theme-argon-18.06
         git clone https://github.com/jerrykuku/luci-app-argon-config ./jerrykuku/luci-app-argon-config
-        git clone https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav ./jerrykuku/luci-app-go-aliyundrive-webdav
-        git clone https://github.com/jerrykuku/go-aliyundrive-webdav ./jerrykuku/go-aliyundrive-webdav
 
         git clone https://github.com/destan19/OpenAppFilter ./op-oaf
                              
@@ -85,6 +82,9 @@ jobs:
                          
         svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser ./op-fileBrowser/filebrowser
         svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filebrowser ./op-fileBrowser/luci-app-filebrowser
+        
+        svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./op-aliyun_webdav/aliyundrive-webdav
+svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./op-aliyun_webdav/luci-app-aliyundrive-webdav
         
         
         
