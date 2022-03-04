@@ -43,7 +43,7 @@ jobs:
         rm -rf ./jerrykuku/*
         rm -rf ./op-oaf
         rm -rf ./op-fileBrowser/*
-        rm -rf ./op-aliyun_webdav/*
+        rm -rf ./op-aliyun/*
         rm -rf ./openwrt-passwall
         rm -rf ./luci-app-ssr-plus
         rm -rf ./patch/redsocks2
