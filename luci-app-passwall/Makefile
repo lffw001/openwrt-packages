@@ -164,6 +164,6 @@ define Package/luci-app-passwall/conffiles
 /usr/share/passwall/rules/lanlist_ipv6
 endef
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
