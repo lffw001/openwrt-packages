@@ -44,6 +44,9 @@ jobs:
         rm -rf ./op-oaf
         rm -rf ./op-fileBrowser/*
         rm -rf ./op-aliyun_webdav/*
+        rm -rf ./openwrt-passwall
+        rm -rf ./luci-app-ssr-plus
+        rm -rf ./patch/redsocks2
         
  
         git clone https://github.com/zzsj0928/luci-app-pushbot ./luci-app-pushbot
@@ -83,8 +86,15 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser ./op-fileBrowser/filebrowser
         svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filebrowser ./op-fileBrowser/luci-app-filebrowser
         
-        svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./op-aliyun_webdav/aliyundrive-webdav
-        svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./op-aliyun_webdav/luci-app-aliyundrive-webdav
+        svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav ./op-aliyun/aliyundrive-webdav
+        svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav ./op-aliyun/luci-app-aliyundrive-webdav
+        svn export https://github.com/messense/aliyundrive-fuse/trunk/openwrt/aliyundrive-fuse ./op-aliyun/aliyundrive-fuse
+        svn export https://github.com/messense/aliyundrive-fuse/trunk/openwrt/luci-app-aliyundrive-fuse ./op-aliyun/luci-app-aliyundrive-fuse
+
+        
+        git clone https://github.com/xiaorouji/openwrt-passwall ./openwrt-passwall
+        svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus ./luci-app-ssr-plus
+        svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2 ./patch/redsocks2
         
         
         
